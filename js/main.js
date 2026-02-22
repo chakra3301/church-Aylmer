@@ -18,6 +18,28 @@
   'use strict';
 
   // ============================================
+  // NEWS ALERT BANNER
+  // ============================================
+
+  const alertBanner = document.querySelector('.alert-banner');
+  const alertDismiss = document.querySelector('.alert-banner__dismiss');
+  const ALERT_DISMISSED_KEY = 'christchurch-alert-dismissed';
+
+  if (alertBanner) {
+    // Hide banner if user dismissed it this session
+    if (sessionStorage.getItem(ALERT_DISMISSED_KEY) === 'true') {
+      alertBanner.classList.add('alert-banner--dismissed');
+    }
+
+    if (alertDismiss) {
+      alertDismiss.addEventListener('click', function() {
+        alertBanner.classList.add('alert-banner--dismissed');
+        sessionStorage.setItem(ALERT_DISMISSED_KEY, 'true');
+      });
+    }
+  }
+
+  // ============================================
   // MOBILE NAVIGATION
   // ============================================
 
