@@ -40,6 +40,74 @@
   }
 
   // ============================================
+  // ABOUT PAGE TABS
+  // ============================================
+
+  const tabButtons = document.querySelectorAll('.about-tabs__tab');
+
+  if (tabButtons.length > 0) {
+    tabButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var targetId = btn.getAttribute('aria-controls');
+
+        // Deactivate all tabs and panels
+        tabButtons.forEach(function(b) {
+          b.classList.remove('about-tabs__tab--active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.about-tab-panel').forEach(function(panel) {
+          panel.classList.remove('about-tab-panel--active');
+          panel.hidden = true;
+        });
+
+        // Activate clicked tab and its panel
+        btn.classList.add('about-tabs__tab--active');
+        btn.setAttribute('aria-selected', 'true');
+        var panel = document.getElementById(targetId);
+        if (panel) {
+          panel.classList.add('about-tab-panel--active');
+          panel.hidden = false;
+        }
+
+        // Re-trigger scroll animations for newly visible elements
+        var newAnimated = panel.querySelectorAll('.animate-on-scroll:not(.is-visible)');
+        if (newAnimated.length > 0 && 'IntersectionObserver' in window && !prefersReducedMotion) {
+          var tabObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                tabObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+          newAnimated.forEach(function(el) { tabObserver.observe(el); });
+        } else {
+          newAnimated.forEach(function(el) { el.classList.add('is-visible'); });
+        }
+      });
+
+      // Keyboard navigation between tabs
+      btn.addEventListener('keydown', function(e) {
+        var tabs = Array.from(tabButtons);
+        var index = tabs.indexOf(btn);
+        var nextIndex;
+
+        if (e.key === 'ArrowRight') {
+          nextIndex = (index + 1) % tabs.length;
+        } else if (e.key === 'ArrowLeft') {
+          nextIndex = (index - 1 + tabs.length) % tabs.length;
+        } else {
+          return;
+        }
+
+        e.preventDefault();
+        tabs[nextIndex].focus();
+        tabs[nextIndex].click();
+      });
+    });
+  }
+
+  // ============================================
   // MOBILE NAVIGATION
   // ============================================
 

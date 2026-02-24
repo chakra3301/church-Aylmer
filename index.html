@@ -21,16 +21,10 @@
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- News alert banner (home page includes newsletter signup) -->
+  <!-- News alert banner -->
   <div class="alert-banner" role="region" aria-label="News and announcements">
     <div class="alert-banner__inner">
       <p class="alert-banner__text">Join us for worship every Sunday at 10:00 AM. All are welcome!</p>
-      <!-- Mailchimp: replace action with your form's post URL (Audience → Signup forms → Embedded forms → copy form action) -->
-      <form class="alert-banner__newsletter" action="#" method="post" target="_blank" aria-label="Newsletter signup">
-        <label for="banner-email" class="visually-hidden">Email for newsletter</label>
-        <input type="email" id="banner-email" name="EMAIL" class="alert-banner__input" placeholder="Your email" required>
-        <button type="submit" class="alert-banner__submit">Join our newsletter</button>
-      </form>
       <button type="button" class="alert-banner__dismiss" aria-label="Dismiss announcement">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -44,11 +38,8 @@
     <div class="container header__inner">
       <!-- Logo -->
       <a href="index.html" class="header__logo" aria-label="Christ Church Aylmer - Home">
-        <!-- Simple cross icon -->
-        <svg class="header__logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M11 2v7H4v4h7v9h2v-9h7V9h-7V2z"/>
-        </svg>
-        <span>Christ Church Aylmer</span>
+        <img src="cclogo.png" alt="Christ Church Aylmer" class="header__logo-img" width="48" height="48">
+        <span class="header__logo-text">Christ Church Aylmer</span>
       </a>
 
       <!-- Desktop Navigation -->
@@ -114,7 +105,7 @@
               <polyline points="12 6 12 12 16 14"/>
             </svg>
             <p class="hero__essential-label">Sunday Service</p>
-            <p class="hero__essential-value hero__essential-value--large">11:00 AM</p>
+            <p class="hero__essential-value hero__essential-value--large">10:00 AM</p>
           </div>
 
           <!-- Address -->
@@ -146,6 +137,19 @@
             </svg>
             View All Services
           </a>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="hero__newsletter" aria-label="Newsletter signup">
+          <p class="hero__newsletter-label">Stay connected with our community</p>
+          <form class="hero__newsletter-form" action="https://christchurchaylmer.us18.list-manage.com/subscribe/post?u=f341603945f21766a4ee59fdd&amp;id=4a5df451e5&amp;f_id=008fb2e6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+            <label for="hero-email" class="visually-hidden">Email for newsletter</label>
+            <input type="email" id="hero-email" name="EMAIL" class="hero__newsletter-input" placeholder="Your email address" required>
+            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+              <input type="text" name="b_f341603945f21766a4ee59fdd_4a5df451e5" tabindex="-1" value="">
+            </div>
+            <button type="submit" name="subscribe" class="btn btn--primary hero__newsletter-btn">Subscribe</button>
+          </form>
         </div>
       </div>
     </section>

@@ -34,10 +34,8 @@
   <header class="header" role="banner">
     <div class="container header__inner">
       <a href="index.html" class="header__logo" aria-label="Christ Church Aylmer - Home">
-        <svg class="header__logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M11 2v7H4v4h7v9h2v-9h7V9h-7V2z"/>
-        </svg>
-        <span>Christ Church</span>
+        <img src="cclogo.png" alt="Christ Church Aylmer" class="header__logo-img" width="48" height="48">
+        <span class="header__logo-text">Christ Church Aylmer</span>
       </a>
 
       <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -85,6 +83,19 @@
         </p>
       </div>
     </section>
+
+    <!-- Tab Navigation -->
+    <div class="about-tabs" role="tablist" aria-label="About page sections">
+      <div class="container about-tabs__inner">
+        <button class="about-tabs__tab about-tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab-about" id="tab-btn-about">About</button>
+        <button class="about-tabs__tab" role="tab" aria-selected="false" aria-controls="tab-incumbents" id="tab-btn-incumbents">Incumbents</button>
+      </div>
+    </div>
+
+    <!-- ============================================
+         ABOUT TAB PANEL
+         ============================================ -->
+    <div id="tab-about" role="tabpanel" aria-labelledby="tab-btn-about" class="about-tab-panel about-tab-panel--active">
 
     <!-- ============================================
          HISTORY SECTION
@@ -296,6 +307,72 @@
         </div>
       </div>
     </section>
+
+    </div><!-- end tab-about -->
+
+    <!-- ============================================
+         INCUMBENTS TAB PANEL
+         ============================================ -->
+    <div id="tab-incumbents" role="tabpanel" aria-labelledby="tab-btn-incumbents" class="about-tab-panel" hidden>
+      <section class="section" aria-labelledby="incumbents-title">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-header__eyebrow">Our People</p>
+            <h2 id="incumbents-title" class="section-header__title">Incumbents</h2>
+            <p class="section-header__description">
+              The clergy and lay leaders who have guided and continue to guide our parish community.
+            </p>
+          </div>
+
+          <div class="incumbents-grid">
+            <!-- David Irving -->
+            <article class="incumbent-card animate-on-scroll">
+              <div class="incumbent-card__image">
+                <img src="my photo.jpeg" alt="David Irving, Organist and Choir Director at Christ Church Aylmer">
+              </div>
+              <div class="incumbent-card__body">
+                <h3 class="incumbent-card__name">David Irving</h3>
+                <p class="incumbent-card__role">Organist & Choir Director</p>
+                <p class="incumbent-card__bio">
+                  David is a versatile musician and composer from the Chelsea area. He is a graduate of Boston's Berklee College of Music and also studied at Banff and York Universities. He has taught music at Carleton University, Philemon Wright High School and now his own music studio. For the last 27 years he has been the resident organist and choir director at Christ Church Aylmer.
+                </p>
+                <div class="incumbent-card__secondary-image">
+                  <img src="piano pic.jpg" alt="David Irving at the piano">
+                </div>
+              </div>
+            </article>
+
+            <!-- Incumbent 2 (placeholder) -->
+            <article class="incumbent-card animate-on-scroll">
+              <div class="incumbent-card__image">
+                <img src="https://placehold.co/400x400/2C3E50/FFFFFF?text=Photo" alt="Name of incumbent">
+              </div>
+              <div class="incumbent-card__body">
+                <h3 class="incumbent-card__name">Name</h3>
+                <p class="incumbent-card__role">Role / Title</p>
+                <p class="incumbent-card__bio">
+                  
+                </p>
+              </div>
+            </article>
+
+            <!-- Incumbent 3 (placeholder) -->
+            <article class="incumbent-card animate-on-scroll">
+              <div class="incumbent-card__image">
+                <img src="https://placehold.co/400x400/2C3E50/FFFFFF?text=Photo" alt="Name of incumbent">
+              </div>
+              <div class="incumbent-card__body">
+                <h3 class="incumbent-card__name">Name</h3>
+                <p class="incumbent-card__role">Role / Title</p>
+                <p class="incumbent-card__bio">
+                  
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div><!-- end tab-incumbents -->
 
   </main>
 
