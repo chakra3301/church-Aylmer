@@ -139,10 +139,10 @@
           </a>
         </div>
 
-        <!-- Newsletter Signup -->
+        <!-- Newsletter Signup (submits to hidden iframe, then shows checkmark) -->
         <div class="hero__newsletter" aria-label="Newsletter signup">
           <p class="hero__newsletter-label">Stay connected with our community</p>
-          <form class="hero__newsletter-form" action="https://christchurchaylmer.us18.list-manage.com/subscribe/post?u=f341603945f21766a4ee59fdd&amp;id=4a5df451e5&amp;f_id=008fb2e6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+          <form class="hero__newsletter-form" action="https://christchurchaylmer.us18.list-manage.com/subscribe/post?u=f341603945f21766a4ee59fdd&amp;id=4a5df451e5&amp;f_id=008fb2e6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="mailchimp-response">
             <label for="hero-email" class="visually-hidden">Email for newsletter</label>
             <input type="email" id="hero-email" name="EMAIL" class="hero__newsletter-input" placeholder="Your email address" required>
             <div aria-hidden="true" style="position: absolute; left: -5000px;">
@@ -150,6 +150,11 @@
             </div>
             <button type="submit" name="subscribe" class="btn btn--primary hero__newsletter-btn">Subscribe</button>
           </form>
+          <div class="hero__newsletter-success" id="newsletter-success" aria-live="polite" hidden>
+            <span class="hero__newsletter-check" aria-hidden="true">✓</span>
+            <span>You're on the list!</span>
+          </div>
+          <iframe name="mailchimp-response" class="hero__newsletter-iframe" title="Newsletter response"></iframe>
         </div>
       </div>
     </section>

@@ -40,6 +40,21 @@
   }
 
   // ============================================
+  // NEWSLETTER FORM (submit to iframe, show checkmark)
+  // ============================================
+
+  const newsletterForm = document.getElementById('mc-embedded-subscribe-form');
+  const newsletterContainer = document.querySelector('.hero__newsletter');
+  const newsletterSuccess = document.getElementById('newsletter-success');
+
+  if (newsletterForm && newsletterContainer && newsletterSuccess) {
+    newsletterForm.addEventListener('submit', function() {
+      newsletterContainer.classList.add('hero__newsletter--submitted');
+      newsletterSuccess.hidden = false;
+    });
+  }
+
+  // ============================================
   // ABOUT PAGE TABS
   // ============================================
 
