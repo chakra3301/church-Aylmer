@@ -499,7 +499,7 @@ p {
 
 .header__logo-img {
   display: block;
-  height: 100px;
+  height: 56px;
   width: auto;
   object-fit: contain;
 }
@@ -1063,8 +1063,14 @@ p {
    ============================================ */
 .incumbents-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .incumbents-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .incumbent-card {
@@ -1418,6 +1424,26 @@ p {
 .footer__section p {
   opacity: 0.8;
   margin-bottom: var(--space-sm);
+}
+
+.footer__ado-logo-link {
+  display: inline-block;
+  margin-top: var(--space-md);
+  margin-bottom: 0;
+}
+
+.footer__ado-logo {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.footer__ado-logo-link:hover .footer__ado-logo {
+  opacity: 1;
 }
 
 .footer__section a {
