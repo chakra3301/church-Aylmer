@@ -707,6 +707,13 @@ p {
   animation: fadeInUp 0.6s ease 0.2s forwards;
 }
 
+@media (max-width: 768px) {
+  .hero .container {
+    padding-left: var(--space-2xl);
+    padding-right: var(--space-2xl);
+  }
+}
+
 /* Essential Info Box - Critical UX element */
 .hero__essentials {
   display: grid;
@@ -1195,6 +1202,16 @@ p {
   opacity: 0.9;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.page-hero__line {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .page-hero__line {
+    display: block;
+  }
 }
 
 /* ============================================
