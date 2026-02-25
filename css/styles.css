@@ -1273,6 +1273,68 @@ p {
 }
 
 /* ============================================
+   EVENTS SECTION
+   ============================================ */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+
+.event-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card__image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.event-card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.event-card__body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.event-card__name {
+  font-size: var(--text-xl);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.event-card__description {
+  color: var(--color-text-light);
+  margin: var(--space-xs) 0;
+}
+
+.event-card__datetime {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  margin: 0;
+}
+
+.event-card__datetime svg {
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+/* ============================================
    CONTACT SECTION
    ============================================ */
 .contact-grid {
