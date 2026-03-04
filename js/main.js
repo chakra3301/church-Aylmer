@@ -363,6 +363,35 @@
   });
 
   // ============================================
+  // IMAGE CAROUSEL
+  // ============================================
+
+  document.querySelectorAll('.carousel').forEach(function(carousel) {
+    var slides = carousel.querySelectorAll('.carousel__slide');
+    var dots = carousel.querySelectorAll('.carousel__dot');
+    var prevBtn = carousel.querySelector('.carousel__btn--prev');
+    var nextBtn = carousel.querySelector('.carousel__btn--next');
+    var current = 0;
+
+    function goTo(index) {
+      slides[current].classList.remove('carousel__slide--active');
+      dots[current].classList.remove('carousel__dot--active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('carousel__slide--active');
+      dots[current].classList.add('carousel__dot--active');
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); });
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() { goTo(i); });
+    });
+
+    // Auto-advance every 5 seconds
+    setInterval(function() { goTo(current + 1); }, 5000);
+  });
+
+  // ============================================
   // HEADER SHADOW ON SCROLL
   // Subtle enhancement for sticky header
   // ============================================

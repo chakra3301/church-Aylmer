@@ -1305,6 +1305,88 @@ p {
 }
 
 /* ============================================
+   IMAGE CAROUSEL
+   ============================================ */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+}
+
+.carousel__track {
+  position: relative;
+  width: 100%;
+}
+
+.carousel__slide {
+  width: 100%;
+  height: auto;
+  display: none;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+}
+
+.carousel__slide--active {
+  display: block;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-primary);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__btn:hover {
+  background: var(--color-surface);
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.carousel__btn--prev {
+  left: var(--space-sm);
+}
+
+.carousel__btn--next {
+  right: var(--space-sm);
+}
+
+.carousel__dots {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--color-surface);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition-fast);
+}
+
+.carousel__dot--active {
+  background: var(--color-surface);
+}
+
+/* ============================================
    EVENTS SECTION
    ============================================ */
 .events-grid {
