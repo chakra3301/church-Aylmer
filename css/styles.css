@@ -1089,6 +1089,20 @@ p {
   gap: var(--space-xl);
 }
 
+.incumbents-subsection-title {
+  grid-column: 1 / -1;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: var(--space-lg) 0 var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.incumbents-subsection-title:first-of-type {
+  margin-top: 0;
+}
+
 @media (max-width: 768px) {
   .incumbents-grid {
     grid-template-columns: 1fr;
@@ -1141,6 +1155,10 @@ p {
 .incumbent-card__bio {
   color: var(--color-text-light);
   margin-bottom: 0;
+}
+
+.incumbent-card__bio + .incumbent-card__bio {
+  margin-top: var(--space-md);
 }
 
 .incumbent-card__secondary-image {
