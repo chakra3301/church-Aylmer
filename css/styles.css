@@ -1451,6 +1451,38 @@ p {
   gap: var(--space-xl);
 }
 
+/* Bulletin Viewer */
+.bulletin-viewer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bulletin-viewer__embed {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  aspect-ratio: 8.5 / 11;
+  max-height: 80vh;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.bulletin-viewer__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.bulletin-viewer__actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-xl);
+}
+
 .event-card {
   padding: 0;
   overflow: hidden;

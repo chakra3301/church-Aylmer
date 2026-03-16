@@ -129,6 +129,62 @@
 
 
     <!-- ============================================
+         WEEKLY BULLETIN
+         ============================================ -->
+    <section class="section section--alt" aria-labelledby="bulletin-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__eyebrow">This Week</p>
+          <h2 id="bulletin-title" class="section-header__title">Weekly Bulletin</h2>
+          <p class="section-header__description">
+            View or download this Sunday's bulletin, including hymns, readings, and announcements.
+          </p>
+        </div>
+        <div class="bulletin-viewer animate-on-scroll">
+          <!--
+            HOW TO UPDATE WEEKLY (no code changes needed):
+            1. Open Google Drive and find the bulletin file
+            2. Right-click → "Manage versions" → "Upload new version"
+            3. Upload the new PDF — the embed below updates automatically
+
+            FIRST-TIME SETUP:
+            1. Upload a bulletin PDF to Google Drive
+            2. Right-click → Share → "Anyone with the link" can view
+            3. Copy the file ID from the URL (the long string between /d/ and /view)
+            4. Replace FILE_ID below with that ID (in both the iframe src and the download link)
+          -->
+          <div class="bulletin-viewer__embed">
+            <iframe
+              src="https://drive.google.com/file/d/1wy3r53-0-tG-mgisKRqelH48kuc864bH/preview"
+              class="bulletin-viewer__iframe"
+              allow="autoplay"
+              title="This week's bulletin PDF"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="bulletin-viewer__actions">
+            <a href="https://drive.google.com/file/d/1wy3r53-0-tG-mgisKRqelH48kuc864bH/view" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+              Open Full Bulletin
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+            <a href="https://drive.google.com/uc?export=download&id=1wy3r53-0-tG-mgisKRqelH48kuc864bH" class="btn btn--outline">
+              Download PDF
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
          EVENTS
          ============================================ -->
     <section class="section section--alt" aria-labelledby="events-title">
