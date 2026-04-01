@@ -371,6 +371,14 @@ p {
   margin-right: auto;
 }
 
+.section--with-background .card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
 .section--with-background .section-header__eyebrow {
   color: var(--color-accent);
 }
