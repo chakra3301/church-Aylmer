@@ -349,13 +349,27 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(253, 251, 247, 0.5);
+  background: rgba(253, 251, 247, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 0;
 }
 
 .section--with-background > .container {
   position: relative;
   z-index: 1;
+}
+
+.section--with-background .section-header__eyebrow {
+  color: var(--color-accent);
+}
+
+.section--with-background .section-header__title {
+  color: #1a1a2e;
+}
+
+.section--with-background .section-header__description {
+  color: #2d2d3d;
 }
 
 /* Flexbox utilities */
