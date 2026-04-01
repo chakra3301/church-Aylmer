@@ -414,4 +414,31 @@
     }, { passive: true });
   }
 
+  // ─── Hero Essentials Carousel ───
+  var heroSlides = document.querySelectorAll('.hero__essentials-slide');
+  var heroDots = document.querySelectorAll('.hero__essentials-dot');
+  var heroPrev = document.querySelector('.hero__essentials-prev');
+  var heroNext = document.querySelector('.hero__essentials-next');
+
+  if (heroSlides.length > 1) {
+    var heroIndex = 0;
+
+    function showHeroSlide(index) {
+      heroSlides.forEach(function (s) { s.classList.remove('hero__essentials-slide--active'); });
+      heroDots.forEach(function (d) { d.classList.remove('hero__essentials-dot--active'); });
+      heroIndex = (index + heroSlides.length) % heroSlides.length;
+      heroSlides[heroIndex].classList.add('hero__essentials-slide--active');
+      heroDots[heroIndex].classList.add('hero__essentials-dot--active');
+    }
+
+    heroPrev.addEventListener('click', function () { showHeroSlide(heroIndex - 1); });
+    heroNext.addEventListener('click', function () { showHeroSlide(heroIndex + 1); });
+
+    heroDots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { showHeroSlide(i); });
+    });
+
+    setInterval(function () { showHeroSlide(heroIndex + 1); }, 5000);
+  }
+
 })();

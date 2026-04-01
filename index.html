@@ -24,7 +24,7 @@
   <!-- News alert banner -->
   <div class="alert-banner" role="region" aria-label="News and announcements">
     <div class="alert-banner__inner">
-      <p class="alert-banner__text">Join us for worship every Sunday at 10:00 AM. All are welcome!</p>
+      <p class="alert-banner__text">Join us for Easter Sunday at 10:00 AM April 5th. All are welcome!</p>
       <button type="button" class="alert-banner__dismiss" aria-label="Dismiss announcement">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -45,6 +45,11 @@
       <!-- Desktop Navigation -->
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <ul class="nav__list">
+          <li class="nav__search-wrap">
+            <svg class="nav__search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="search-input" class="nav__search-input" placeholder="Search..." autocomplete="off">
+            <ul id="search-results" class="search-dropdown"></ul>
+          </li>
           <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="services.html" class="nav__link">Services</a></li>
@@ -99,27 +104,72 @@
           to experience God's love and grace.
         </p>
 
-        <!-- Essential Information Box
-             This is the KEY UX element - impossible to miss -->
+        <!-- Essential Information Carousel -->
         <div class="hero__essentials" role="region" aria-label="Essential church information">
-          <!-- Service Times -->
-          <div class="hero__essential-item">
-            <svg class="hero__essential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-            <p class="hero__essential-label">Sunday Service</p>
-            <p class="hero__essential-value hero__essential-value--large">10:00 AM</p>
+          <button class="hero__essentials-prev" aria-label="Previous slide">&#8249;</button>
+          <div class="hero__essentials-track">
+            <!-- Slide 1: Service & Location -->
+            <div class="hero__essentials-slide hero__essentials-slide--active">
+              <div class="hero__essentials-grid">
+                <div class="hero__essential-item">
+                  <svg class="hero__essential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <p class="hero__essential-label">Sunday Service</p>
+                  <p class="hero__essential-value hero__essential-value--large">10:00 AM</p>
+                </div>
+                <div class="hero__essential-item">
+                  <svg class="hero__essential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <p class="hero__essential-label">Location</p>
+                  <p class="hero__essential-value">101 Rue Symmes<br>Aylmer, QC. J9H 3K6</p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2: Good Friday -->
+            <div class="hero__essentials-slide">
+              <div class="hero__essential-item">
+                <svg class="hero__essential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                </svg>
+                <p class="hero__essential-label">Good Friday Service</p>
+                <p class="hero__essential-value hero__essential-value--large">April 3rd &bull; 2:00 PM</p>
+                <p class="hero__essential-sub">A solemn service marking the crucifixion of Jesus Christ</p>
+              </div>
+            </div>
+            <!-- Slide 3: Easter Sunday -->
+            <div class="hero__essentials-slide">
+              <div class="hero__essential-item">
+                <svg class="hero__essential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <p class="hero__essential-label">Easter Sunday Service</p>
+                <p class="hero__essential-value hero__essential-value--large">April 5th &bull; 10:00 AM</p>
+                <p class="hero__essential-sub">Celebrate the resurrection with Holy Eucharist &amp; fellowship</p>
+              </div>
+            </div>
+            <!-- Slide 4: Book & Bake Sale -->
+            <div class="hero__essentials-slide">
+              <div class="hero__essential-item">
+                <svg class="hero__essential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <p class="hero__essential-label">Spring Book &amp; Bake Sale</p>
+                <p class="hero__essential-value hero__essential-value--large">April 16&ndash;17 &bull; 10 AM&ndash;4 PM</p>
+                <p class="hero__essential-sub">Gallery d'Aylmer &mdash; 181 Principale St, Gatineau</p>
+              </div>
+            </div>
           </div>
-
-          <!-- Address -->
-          <div class="hero__essential-item">
-            <svg class="hero__essential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            <p class="hero__essential-label">Location</p>
-            <p class="hero__essential-value">101 Rue Symmes<br>Aylmer, QC. J9H 3K6</p>
+          <button class="hero__essentials-next" aria-label="Next slide">&#8250;</button>
+          <div class="hero__essentials-dots">
+            <button class="hero__essentials-dot hero__essentials-dot--active" aria-label="Slide 1"></button>
+            <button class="hero__essentials-dot" aria-label="Slide 2"></button>
+            <button class="hero__essentials-dot" aria-label="Slide 3"></button>
+            <button class="hero__essentials-dot" aria-label="Slide 4"></button>
           </div>
         </div>
 
@@ -398,5 +448,6 @@
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>

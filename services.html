@@ -21,7 +21,7 @@
   <!-- News alert banner -->
   <div class="alert-banner" role="region" aria-label="News and announcements">
     <div class="alert-banner__inner">
-      <p class="alert-banner__text">Join us for worship every Sunday at 10:00 AM. All are welcome!</p>
+      <p class="alert-banner__text">Join us for Easter Sunday at 10:00 AM April 5th. All are welcome!</p>
       <button type="button" class="alert-banner__dismiss" aria-label="Dismiss announcement">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -40,6 +40,11 @@
 
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <ul class="nav__list">
+          <li class="nav__search-wrap">
+            <svg class="nav__search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="search-input" class="nav__search-input" placeholder="Search..." autocomplete="off">
+            <ul id="search-results" class="search-dropdown"></ul>
+          </li>
           <li><a href="index.html" class="nav__link">Home</a></li>
           <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="services.html" class="nav__link nav__link--active">Services</a></li>
@@ -48,6 +53,7 @@
           <li><a href="donate.html" class="nav__donate">Donate</a></li>
         </ul>
       </nav>
+
 
       <button
         class="menu-toggle"
@@ -484,6 +490,8 @@
     </div>
   </footer>
 
+
   <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>
