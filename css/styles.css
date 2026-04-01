@@ -337,7 +337,7 @@ p {
   position: relative;
   background-image: url('../spring church.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -349,15 +349,26 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(253, 251, 247, 0.75);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(253, 251, 247, 0.3);
   z-index: 0;
 }
 
 .section--with-background > .container {
   position: relative;
   z-index: 1;
+}
+
+.section--with-background .section-header {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  padding: var(--space-xl) var(--space-2xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section--with-background .section-header__eyebrow {
