@@ -268,29 +268,43 @@
         return;
       }
 
-      // Simulate form submission
-      // In production, replace with actual form submission logic
-      // (e.g., fetch to a server endpoint or form service like Formspree)
+      // Submit to Web3Forms (https://web3forms.com).
+      // The access key lives in the hidden "access_key" field in contact.html.
       const submitButton = contactForm.querySelector('button[type="submit"]');
       const originalText = submitButton.textContent;
       submitButton.textContent = 'Sending...';
       submitButton.disabled = true;
 
-      // Simulate network delay
-      setTimeout(function() {
-        // Show success message
-        showFormMessage(
-          'Thank you for your message! We\'ll be in touch soon.',
-          'success'
-        );
-
-        // Reset form
-        contactForm.reset();
-
-        // Restore button
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-      }, 1000);
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      })
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          if (data.success) {
+            showFormMessage(
+              'Thank you for your message! We\'ll be in touch soon.',
+              'success'
+            );
+            contactForm.reset();
+          } else {
+            showFormMessage(
+              'Sorry, something went wrong sending your message. Please email us directly at christchurchaylmer@gmail.com.',
+              'error'
+            );
+          }
+        })
+        .catch(function() {
+          showFormMessage(
+            'Sorry, something went wrong sending your message. Please email us directly at christchurchaylmer@gmail.com.',
+            'error'
+          );
+        })
+        .then(function() {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        });
     });
   }
 

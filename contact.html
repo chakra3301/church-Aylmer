@@ -308,7 +308,16 @@
 
           <!-- Contact Form -->
           <div class="animate-on-scroll">
-            <form class="contact-form" action="#" method="POST" id="contactForm">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+              <!-- Web3Forms config. Replace the access_key value below with the real
+                   key emailed to you from https://web3forms.com (free). The form will
+                   NOT deliver messages until this is a valid key. -->
+              <input type="hidden" name="access_key" value="cac11cc4-c9fd-4d31-af1f-f8f55da01456">
+              <input type="hidden" name="subject" value="New message from the Christ Church Aylmer website">
+              <input type="hidden" name="from_name" value="Christ Church Aylmer Website">
+              <!-- Honeypot: hidden from people, catches spam bots -->
+              <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
               <div class="form-group">
                 <label for="name" class="form-label">Your Name <span aria-hidden="true">*</span></label>
                 <input
@@ -348,13 +357,13 @@
 
               <div class="form-group">
                 <label for="subject" class="form-label">Subject</label>
-                <select id="subject" name="subject" class="form-input">
-                  <option value="general">General Inquiry</option>
-                  <option value="visit">Planning a Visit</option>
-                  <option value="baptism">Baptism</option>
-                  <option value="wedding">Wedding</option>
-                  <option value="funeral">Funeral / Memorial</option>
-                  <option value="other">Other</option>
+                <select id="subject" name="inquiry_type" class="form-input">
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Planning a Visit">Planning a Visit</option>
+                  <option value="Baptism">Baptism</option>
+                  <option value="Wedding">Wedding</option>
+                  <option value="Funeral / Memorial">Funeral / Memorial</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
