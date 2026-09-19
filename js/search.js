@@ -19,7 +19,7 @@
     {
       page: 'Services',
       url: 'services.html',
-      content: 'Sunday Service Holy Eucharist 10:00 AM Holy Communion Lord\'s Supper hymns scripture readings Old Testament Psalms Epistles Gospels sermon Communion coffee hour fellowship Upcoming Events Spring Book Bake Sale Good Friday Service Easter Sunday Service weekly bulletin PDF readings announcements What to Expect first visit parking wheelchair accessible children welcome communion bread wine'
+      content: 'Sunday Service Holy Eucharist 10:00 AM Holy Communion Lord\'s Supper hymns scripture readings Old Testament Psalms Epistles Gospels sermon Communion coffee hour fellowship Upcoming Events Harvest Moon Concert Friday September 25 7:00 PM net proceeds CCA Fall Book Bake Sale Thursday October 1 Friday October 2 Galeries d’Aylmer donations drop-off after 9:30 AM weekly bulletin PDF readings announcements What to Expect first visit parking wheelchair accessible children welcome communion bread wine'
     },
     {
       page: 'Facilities',
